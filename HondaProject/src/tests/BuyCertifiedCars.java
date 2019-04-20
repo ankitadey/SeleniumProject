@@ -9,11 +9,14 @@ import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 //import org.testng.Assert;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import Data.HondaModels;
@@ -26,7 +29,7 @@ public class BuyCertifiedCars extends Reusable {
 	WebDriver driver;
 	int totcount=0;
 	int totrowcount = 0;
-	int totdefaultrowcount=0;
+	int totrowcountnew=0;
 	File file=null;
 	FileInputStream fileInput=null;
 	String cityselected;
@@ -114,13 +117,13 @@ public class BuyCertifiedCars extends Reusable {
       prop.load(fileInput);
       
       String price=prop.getProperty("price");
-      if(price!=null)
+      if(!price.isEmpty())
       {
     	  selectFromDropdownById("price-range",price);
       }
       
       String Kms=prop.getProperty("Kms");
-      if(Kms!=null)
+      if(!Kms.isEmpty())
       {
     	  
     	  rbkms=driver.findElements(By.xpath("//div[@class='radio']//input"));
@@ -139,12 +142,12 @@ public class BuyCertifiedCars extends Reusable {
       String YearFrom=prop.getProperty("YearFrom");
       String YearTo=prop.getProperty("YearTo");
       
-      if(YearFrom!=null)
+      if(!YearFrom.isEmpty())
       {
     	  selectFromDropdownById("invt_year_from",YearFrom);
       }
       
-      if(YearTo!=null)
+      if(!YearTo.isEmpty())
       {
     	  selectFromDropdownById("invt_year_to",YearTo);
       }
@@ -198,15 +201,32 @@ public class BuyCertifiedCars extends Reusable {
 		  }
     	  
       }
-	  
+      
+      String actualcounttext=driver.findElement(By.className("filter-head")).getText();
+      String arr[]=actualcounttext.split("\\s+");
+      String actualcount=arr[0].toString();
+      totcount=Integer.parseInt(actualcount);
+      totrowcount=getData();
+      if(totrowcount>=12)
+		{
+    	  ((JavascriptExecutor)driver).executeScript("window.scrollTo(0,document.body.scrollHeight)");
+			Thread.sleep(5000);
+			totrowcountnew=getData();
+			
+			totcount=Integer.parseInt(actualcount);
+			 Assert.assertEquals(totcount, totrowcountnew);
+	    	 System.out.println("Total count is matched");
+			
+		}
+      else
+       {
+    	 
+    	  Assert.assertEquals(totcount, totrowcount);
+    	  System.out.println("Total count is matched");
+       }
       
 	}
 	
-	@Test(priority = 2)
-	public void totalCountMatch()
-	{
-		
-	}
 	
 
 }	

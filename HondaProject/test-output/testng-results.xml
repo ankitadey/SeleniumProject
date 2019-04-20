@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="53983" started-at="2019-04-20T11:44:17Z" finished-at="2019-04-20T11:45:11Z">
+  <suite name="Default suite" duration-ms="49651" started-at="2019-04-20T14:10:06Z" finished-at="2019-04-20T14:10:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="53983" started-at="2019-04-20T11:44:17Z" finished-at="2019-04-20T11:45:11Z">
+    <test name="Default test" duration-ms="49651" started-at="2019-04-20T14:10:06Z" finished-at="2019-04-20T14:10:55Z">
       <class name="tests.BuyCertifiedCars">
-        <test-method status="PASS" signature="invokeDriver()[pri:0, instance:tests.BuyCertifiedCars@5cc7c2a6]" name="invokeDriver" is-config="true" duration-ms="20479" started-at="2019-04-20T17:14:17Z" finished-at="2019-04-20T17:14:37Z">
+        <test-method status="PASS" signature="invokeDriver()[pri:0, instance:tests.BuyCertifiedCars@5cc7c2a6]" name="invokeDriver" is-config="true" duration-ms="20610" started-at="2019-04-20T19:40:06Z" finished-at="2019-04-20T19:40:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invokeDriver -->
-        <test-method status="PASS" signature="validateCity()[pri:0, instance:tests.BuyCertifiedCars@5cc7c2a6]" name="validateCity" duration-ms="57" started-at="2019-04-20T17:14:37Z" finished-at="2019-04-20T17:14:37Z">
+        <test-method status="PASS" signature="validateCity()[pri:0, instance:tests.BuyCertifiedCars@5cc7c2a6]" name="validateCity" duration-ms="22" started-at="2019-04-20T19:40:26Z" finished-at="2019-04-20T19:40:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCity -->
-        <test-method status="PASS" signature="dataSelectionHondaCar()[pri:0, instance:tests.BuyCertifiedCars@5cc7c2a6]" name="dataSelectionHondaCar" duration-ms="33429" started-at="2019-04-20T17:14:37Z" finished-at="2019-04-20T17:15:11Z">
+        <test-method status="PASS" signature="dataSelectionHondaCar()[pri:0, instance:tests.BuyCertifiedCars@5cc7c2a6]" name="dataSelectionHondaCar" duration-ms="29013" started-at="2019-04-20T19:40:26Z" finished-at="2019-04-20T19:40:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataSelectionHondaCar -->

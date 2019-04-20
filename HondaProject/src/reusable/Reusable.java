@@ -14,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+
 //import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Select;
 
@@ -94,29 +95,20 @@ public class Reusable {
 		   
 	   }
 	   
-	   /**************** Get Data from each page and return rowcount of each page ***********************/
-	   public  int getData()
+	   /**************** Get Data from each page and return rowcount of each page 
+	 * @throws InterruptedException ***********************/
+	   public  int getData() throws InterruptedException
 		{
-			WebElement table=driver.findElement(By.xpath("//div[@class='content white']"));
-			List<WebElement> rows=table.findElements(By.xpath("//div[@class='row-item']/div"));
-			int rowcount=rows.size();//3
+			WebElement table=driver.findElement(By.xpath("//div[@id='inventory_div']"));
+			List<WebElement> cars=table.findElements(By.xpath("//div[@class='col-sm-4 col-xs-4 pad-L0 pad-R0 mrg-R20 both_page_view']"));
+			int rowcount=cars.size();//3
 			System.out.println("Total count "+ rowcount);
-			int j;
-			String text1="";
+			
 			
 			for(int i=0;i<rowcount;i++)
 			{
-				List<WebElement>columns1=rows.get(i).findElements(By.xpath("//div[@class='col-lg-3 col-md-4 col-sm-4']/div/div/a/img"));
-				//System.out.println(columns1.size());
-				
-				for(j=0;j<=i;j++)
-				{
-			
-					text1=columns1.get(j).getAttribute("alt");
-					
-				}	
-				System.out.println(text1);
-				
+				List<WebElement> carname=driver.findElements(By.xpath("//div[@class='col-sm-4 col-xs-4 pad-L0 pad-R0 mrg-R20 both_page_view']//h3/a"));
+				System.out.println(carname.get(i).getText());
 				
 			}
 			
@@ -124,55 +116,7 @@ public class Reusable {
 					
 		}
 	   
-	   /*********************** Pagination ********************/
 	   
-	   public  int pagination(WebDriver driver) {
-			int totrowcount=0;
-			int pagenumber=1;
-			
-			// get the pagination links
-			List<WebElement> paginationlinks=driver.findElements(By.xpath("//*[@id='Pagination']/span"));
-			
-			//get the pagination links count in a page
-			int countlinks=paginationlinks.size();
-			
-			// get the last page number
-			WebElement lastpage = driver.findElement(By.xpath("//span[@class='pagingnextclass']/preceding::span[1]"));
-			
-			
-			int LastPageNumber=Integer.parseInt(lastpage.getText());
-			
-			//System.out.println("Total Links: "+countlinks);
-			//System.out.println("Last Page Number: "+LastPageNumber);
-			
-			//if pagination exists
-			if(paginationlinks.size()>0)
-			{
-			
-				// Loop iterates until the current page number is less than  lastpagenumber
-				while(pagenumber<=LastPageNumber) {
-					
-					 totrowcount=totrowcount+getData();
-					 WebElement nextbutton=driver.findElement(By.xpath("//span[@class='pagingnextclass']"));
-					 nextbutton.click();
-					 paginationlinks=driver.findElements(By.xpath("//*[@id='Pagination']/span"));
-					 countlinks=paginationlinks.size();
-					 LastPageNumber=countlinks-2;
-					 System.out.println("Total Links: "+countlinks);
-				     System.out.println("Last Page Number: "+LastPageNumber);
-					 pagenumber++;
-					
-				}
-			}
-			else
-			{
-				System.out.println("pagination doesnot exist");
-				totrowcount=getData();
-				
-			}
-			return totrowcount;
-		}
-
 
 	  //Fill the data in the textboxes
 		

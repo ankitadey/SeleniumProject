@@ -6,5 +6,5 @@ public class HondaModels {
 	
 	public static final String FuelType[]= {"Petrol","Diesel"};
 	
-	public static final String Transmission[]= {"Manual","Automatic"};
+	public static final String Transmission[]= {"Automatic"};
 }
