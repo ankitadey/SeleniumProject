@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="tests.ContactDetail3">
+        <methods>
+          <include name="invokeDriver"/>
+          <include name="contactDetail"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- tests.ContactDetail3 -->
+      <class name="tests.BuyCertifiedCars">
+        <methods>
+          <include name="invokeDriver"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- tests.BuyCertifiedCars -->
+      <class name="tests.CarValuation">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="invokeDriver"/>
+        </methods>
+      </class> <!-- tests.CarValuation -->
+      <class name="tests.HomePage">
+        <methods>
+          <include name="invokeDriver"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- tests.HomePage -->
+      <class name="tests.SearchResults">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="invokeDriver"/>
+        </methods>
+      </class> <!-- tests.SearchResults -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

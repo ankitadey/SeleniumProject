@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="10" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="226331" started-at="2019-04-19T15:20:54Z" finished-at="2019-04-19T15:24:41Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="226331" started-at="2019-04-19T15:20:54Z" finished-at="2019-04-19T15:24:41Z">
+      <class name="tests.SearchResults">
+        <test-method status="PASS" signature="invokeDriver()[pri:0, instance:tests.SearchResults@4439f31e]" name="invokeDriver" is-config="true" duration-ms="6111" started-at="2019-04-19T20:51:26Z" finished-at="2019-04-19T20:51:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeDriver -->
+        <test-method status="PASS" signature="getSearchData(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SearchResults@4439f31e]" name="getSearchData" duration-ms="23203" started-at="2019-04-19T20:51:32Z" data-provider="getDataForSearch" finished-at="2019-04-19T20:51:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[New Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hyundai]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Xcent]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSearchData -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:tests.SearchResults@4439f31e]" name="closeDriver" is-config="true" duration-ms="167" started-at="2019-04-19T20:51:55Z" finished-at="2019-04-19T20:51:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- tests.SearchResults -->
+      <class name="tests.ContactDetail3">
+        <test-method status="PASS" signature="invokeDriver()[pri:0, instance:tests.ContactDetail3@5f375618]" name="invokeDriver" is-config="true" duration-ms="6355" started-at="2019-04-19T20:52:41Z" finished-at="2019-04-19T20:52:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeDriver -->
+        <test-method status="PASS" signature="contactDetail()[pri:0, instance:tests.ContactDetail3@5f375618]" name="contactDetail" duration-ms="98595" started-at="2019-04-19T20:52:48Z" finished-at="2019-04-19T20:54:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactDetail -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:tests.ContactDetail3@5f375618]" name="closeDriver" is-config="true" duration-ms="111" started-at="2019-04-19T20:54:26Z" finished-at="2019-04-19T20:54:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- tests.ContactDetail3 -->
+      <class name="tests.CarValuation">
+        <test-method status="PASS" signature="invokeDriver()[pri:0, instance:tests.CarValuation@1810399e]" name="invokeDriver" is-config="true" duration-ms="6055" started-at="2019-04-19T20:54:26Z" finished-at="2019-04-19T20:54:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeDriver -->
+        <test-method status="PASS" signature="getDetailsValuation()[pri:0, instance:tests.CarValuation@1810399e]" name="getDetailsValuation" duration-ms="8279" started-at="2019-04-19T20:54:32Z" finished-at="2019-04-19T20:54:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDetailsValuation -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:tests.CarValuation@1810399e]" name="closeDriver" is-config="true" duration-ms="118" started-at="2019-04-19T20:54:41Z" finished-at="2019-04-19T20:54:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- tests.CarValuation -->
+      <class name="tests.HomePage">
+        <test-method status="PASS" signature="invokeDriver()[pri:0, instance:tests.HomePage@215be6bb]" name="invokeDriver" is-config="true" duration-ms="12090" started-at="2019-04-19T20:50:54Z" finished-at="2019-04-19T20:51:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeDriver -->
+        <test-method status="PASS" signature="validateTitleHomePage()[pri:0, instance:tests.HomePage@215be6bb]" name="validateTitleHomePage" duration-ms="1081" started-at="2019-04-19T20:51:06Z" finished-at="2019-04-19T20:51:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTitleHomePage -->
+        <test-method status="PASS" signature="validateNavigation()[pri:0, instance:tests.HomePage@215be6bb]" name="validateNavigation" duration-ms="172" started-at="2019-04-19T20:51:08Z" finished-at="2019-04-19T20:51:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNavigation -->
+        <test-method status="PASS" signature="validateFooterLinks()[pri:0, instance:tests.HomePage@215be6bb]" name="validateFooterLinks" duration-ms="17676" started-at="2019-04-19T20:51:08Z" finished-at="2019-04-19T20:51:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateFooterLinks -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:tests.HomePage@215be6bb]" name="closeDriver" is-config="true" duration-ms="720" started-at="2019-04-19T20:51:25Z" finished-at="2019-04-19T20:51:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- tests.HomePage -->
+      <class name="tests.BuyCertifiedCars">
+        <test-method status="PASS" signature="invokeDriver()[pri:0, instance:tests.BuyCertifiedCars@7921b0a2]" name="invokeDriver" is-config="true" duration-ms="6150" started-at="2019-04-19T20:51:56Z" finished-at="2019-04-19T20:52:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeDriver -->
+        <test-method status="PASS" signature="FillDropdown()[pri:0, instance:tests.BuyCertifiedCars@7921b0a2]" name="FillDropdown" duration-ms="13483" started-at="2019-04-19T20:52:02Z" finished-at="2019-04-19T20:52:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillDropdown -->
+        <test-method status="PASS" signature="validateTotRowCount()[pri:0, instance:tests.BuyCertifiedCars@7921b0a2]" name="validateTotRowCount" duration-ms="3309" started-at="2019-04-19T20:52:15Z" finished-at="2019-04-19T20:52:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTotRowCount -->
+        <test-method status="PASS" signature="buyCarClick()[pri:0, instance:tests.BuyCertifiedCars@7921b0a2]" name="buyCarClick" duration-ms="18692" started-at="2019-04-19T20:52:19Z" finished-at="2019-04-19T20:52:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buyCarClick -->
+        <test-method status="PASS" signature="SortBy()[pri:0, instance:tests.BuyCertifiedCars@7921b0a2]" name="SortBy" duration-ms="1764" started-at="2019-04-19T20:52:37Z" finished-at="2019-04-19T20:52:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SortBy -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:tests.BuyCertifiedCars@7921b0a2]" name="closeDriver" is-config="true" duration-ms="2138" started-at="2019-04-19T20:52:39Z" finished-at="2019-04-19T20:52:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- tests.BuyCertifiedCars -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
